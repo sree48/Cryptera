@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cryptera 2017</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet">
+  <script src="js/lightbox.js"></script>
+  <link rel="stylesheet" href="css/animate.css">
+  <script src="js/wow.min.js"></script>
+  <script>
+  		new WOW().init();
+  </script>
+  <style>
+  html{
+  	 width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  body {
+      position: relative; 
+  }
+
+
+.box {
+            width: 20%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 35px;
+            border: 2px solid #fff;
+            border-radius: 20px/50px;
+            background-clip: padding-box;
+            text-align: center;
+          }
+          .button {
+            font-size: 1em;
+            padding: 10px;
+            color: #fff;
+            border: 2px solid orange;
+            border-radius: 20px/50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+          }
+          .button:hover {
+            background: orange;
+          }
+          .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: visible;
+            opacity: 1;
+          }
+          .overlay:target {
+            visibility: hidden;
+            opacity: 0;
+            display:none
+          }
+          .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+          }
+          .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+          }
+          .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+          }
+          .popup .close:hover {
+            color: orange;
+          }
+          .popup .content {
+            max-height: 30%;
+            overflow: auto;
+          }
+
+  #home {padding-top:50px;height:100vh;color: #fff; background-image: url(images/head.gif);background-attachment: fixed;background-repeat: no-repeat;background-size: cover;}
+  #about {padding-top:50px;min-height: 500px;padding-bottom: 10px;color: #fff; background-color: #088cbc;}
+  #events {padding:50px;min-height:500px;color: #fff; background-color: #fff;}
+  #sponsor {padding:50px;min-height:500px;color: #fff; background-color: #c5f442;}
+  #contact {padding:50px;min-height:100vh;color: #fff; background-color: #323438;}
+
+.sponsorimg:hover{
+  box-shadow: 10px 10px 5px #888888;
+}
+
+  nav li{
+  	margin: 0px 10px;
+  	font-size: 20px;
+  	font-family: slabo;
+  }
+  .photo {
+    display: table;
+}
+.photo a {
+    vertical-align: middle;
+    display: table-cell;
+}
+.photo img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item{
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+	margin: 20px;
+}
+.eventsall{
+	min-height: 300px;
+	margin: 0;
+	padding: 30px;
+}
+#events p{
+
+}
+blockquote{
+	min-height:150px;
+	border-radius: 5px;
+}
+
+
+.box {
+  width: 20%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid orange;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: orange;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  height: 10%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close {
+  color: black;
+  opacity: .9;
+}
+.popup .close:hover {
+  color: orange;
+}
+.popup .content {
+  max-height: 50%;
+  overflow: auto;
+}
+
+
+  </style>
+  <script type="text/javascript">
+  	$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
+  	$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+});
+    $(document).ready(function() {
+    $(function(){
+      
+      $('#popup1').css("visibility", "visible"); 
+       $('#popup1').css("opacity", 1); 
+      
+       });
+  
+  $( ".close" ).click(function() {
+    
+       $('#popup1').css("visibility", "hidden"); 
+       $('#popup1').css("opacity", 0);
+    });
+});
+  </script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="100" >
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: .9;display: block;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="color: white;padding-top: 10px;"><img src="images/crypt.png" style="width: 120px;width: 120px;"></a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" style="float: right;	">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#" onclick="window.open('gaming.html' + location.search)">Gaming</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#" onclick="window.open('register/index.html' + location.search)">Register</a></li>
+          <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">UNIQ Technologies</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" onclick="window.open('http://www.inplanttraining.org/' + location.search)">Inplant Training</a></li>
+                  <li><a href="#" onclick="window.open('http://www.internshipinchennai.com/' + location.search)">Internships</a></li>
+                  <li><a href="#" onclick="window.open('http://www.ieeefinalyearprojects.org/' + location.search)">IEEE Projects</a></li>
+                  <li><a href="#" onclick="window.open('http://www.androidtraininginchennai.com/' + location.search)">Android Training</a></li>
+                </ul>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>   
+
+<div id="popup1" class="overlay">
+  <div class="popup" style="opacity: 0.8;">
+    <h2>Important Note</h2>
+    <a class="close" href="#">×</a>
+    <div class="content" style="font-size: large;">
+      On-Spot Registration is also accepted for anyone who wish to present their papers or join in our workshops. Do not worry about registration for any event in Cryptera, as we would be delighted to help you in case of any problems that might arise in our Symposium.
+    </div>
+  </div>
+</div>
+
+
+
+<div id="home" class="container-fluid" style="text-align: center;width: 100%;">
+  <div class="container wow fadeInDown" style="font-size: 6vw;margin-top: 100px;">CRYPTERA '17</div>
+</div>
+<!--About Start-->
+<div id="about" class="container-fluid row wow slideInLeft" data-wow-duration=".5s">
+<div  class="wow slideInRight" data-wow-delay=".2s" data-wow-duration=".5s">
+<div style="float: left;clear: right;padding: 30px;" class="col-md-8 col-sm-8">
+  <h1 style="font-size: 6vw;margin: 20px 0px;">About</h1>
+  <p style="font-size: 20px;text-indent: 20px;color: black;">We, at cryptera, bring to you CIT's technical symposium filled with aspiring computer science engineers striving to change the world and share it with all those willing to participate! All you need to do is take one small step towards the CIT entrance on September 8 and thus take one great step towards a greater future!</p>
+  <blockquote>
+  	It's not really about the competition. Your biggest challenge in a race is yourself. You're often racing against time. You're frequently running everything through your mind. You're always competing against preconceived ideas. It's not really the person next to you that you worry about.
+  </blockquote>
+	</div>
+	<!--About End-->
+	  <div class="col-md-4 col-sm-4 photo">
+	    <a href="#">
+	        <img src="images/about.png">
+	    </a>
+	</div>
+</div>
+</div>
+<div id="events" class="container-fluid"  style="color: black;">
+  <div class="row">
+  <div class="center">
+  	
+  	<div class="col-md-6 col-sm-12 container eventsall wow slideInRight" data-wow-duration="1s">
+  		<h1>Paper Presentation</h1>
+  		<hr>
+  		<blockquote>Nothing speaks better than your ideas presented to the world. Present your ideas and projects and papers and win exciting prizes !</blockquote>
+  		<p>To know more,</p>
+  		<a href="#" onclick="window.open('paper.html' + location.search)" class="btn btn-primary">Take me there</a>
+  	</div>
+  	<div class="col-md-6 col-sm-12 container eventsall wow slideInLeft" data-wow-duration="1s">
+  		<h1>Technical Events</h1>
+  		<hr>
+  		<blockquote>Show your coding skills to the world and display your prowess in programming in a range of events including debugging, blind coding and quizzes!</blockquote>
+  		<p>To know more,</p>
+  		<a href="#" onclick="window.open('events/index.html' + location.search)" class="btn btn-primary">Take me there</a>
+  	</div>
+
+  </div>
+  </div>
+  <div class="row">
+  <div class="center">
+  	<div class="col-md-6 col-sm-12 container eventsall wow slideInRight" data-wow-duration="1s">
+  		<h1>Workshops</h1>
+  		<hr>
+  		<blockquote>Practice makes one perfect. Learn how in our workshops on current topics including Machine Learning and Algorithms !</blockquote>
+  		<p>To know more,</p>
+  		<a href="#" onclick="window.open('work.html' + location.search)" class="btn btn-primary">Take me there</a>
+  	</div>
+  	<div class="col-md-6 col-sm-12 container eventsall wow slideInLeft" data-wow-duration="1s">
+  		<h1>Registration</h1>
+  		<hr>
+  		<blockquote>The ultimate victory in competition is derived from the inner satisfaction of knowing that you have done your best and that you have gotten the most out of what you had to give.</blockquote>
+  			<div>
+  				<div class="container">
+  		<div>For Registration, click one of the following,</div>
+  		<a href="#" onclick="window.open('register/index.html' + location.search)" class="btn btn-primary" style="margin: 20px 10px 20px 0px;">Workshop Registration</a>
+  		<a href="#" onclick="window.open('register/index.html' + location.search)" class="btn btn-primary" style="margin: 20px 10px 20px 0px;">Events Registration</a>
+  		<a href="#" onclick="location.href='mailto:csecrypterappt@gmail.com?Subject=Your%20Topic%20here&Body=Don\'t forget to change the subject...'" class="btn btn-primary" target="_top" style="margin: 20px 10px 20px 0px;">For Paper presentation, Send Mail</a>
+  				</div>
+  			</div>
+  	</div>
+
+  </div>
+  </div>
+</div>
+
+
+<div id="sponsor" class="container-fluid"  style="color: black;">
+    <div style="font-size: xx-large;margin-bottom: 10px;">Our Sponsors,</div>
+<div class="row">
+<div class="col-md-4" style="padding: 20px;">
+    <a href="#" onclick="window.open('https://www.uniqtechnologies.co.in/' + location.search)"><img src="images/uniqlogo.jpg" width="300px" height="100px;" style="display: block;margin: auto;"></a>
+    <div style="display: block;margin: auto;text-align: center;">
+      <a href="images/uniqsouv.jpg" data-lightbox="image-1" data-title="uniqsouvenir"><img src="images/uniqsouv1.jpg" class="sponsorimg" width="200px" height="auto" style="margin: 10px 10px 0px 10px;"></a>
+      <a href="images/uniqimplant.jpg" data-lightbox="image-2" data-title="uniqimplant"><img src="images/uniqimplant.jpg" class="sponsorimg" width="200px" height="auto" style="margin: 10px 10px 0px 10px;"></a>
+    </div>
+</div>
+<div class="col-md-4" style="padding: 20px;">
+<hr>
+  <a href="#" onclick="window.open('http://www.niit.com/' + location.search)"><img src="images/niitlogo.png" width="300px" style="display: block;margin: auto;"></a>
+  <div>
+    <h2>About NIIT</h2>
+NIIT is a leading Skills and Talent Development Corporation that is building a manpower pool for global industry requirements. The company, which was set up in 1981 to help the nascent IT industry overcome its human resource challenges, today ranks among the world’s leading training companies owing to its vast, yet comprehensive array of talent development programs. With a footprint across 40 nations, NIIT offers training and development solutions to Individuals, Enterprises and Institutions.
+  </div>
+<hr>
+</div>
+<div class="col-md-4" style="padding: 20px;">
+    <img src="images/csglogo.jpg" width="300px" height="100%" style="display: block;margin: auto;">
+    <div style="display: block;margin: auto;text-align: center;">
+      <a href="images/fly.jpg" data-lightbox="image-3" data-title="fly"><img src="images/fly1.jpg" class="sponsorimg" width="200px" height="auto" style="margin: 10px 10px 0px 10px;"></a>
+      <a href="images/vcard.jpg" data-lightbox="image-4" data-title="vcard"><img src="images/vcard1.jpg" class="sponsorimg" width="200px" height="auto" style="margin: 10px 10px 0px 10px;"></a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<div id="contact" class="container-fluid"  style="color: white;">
+<div><h1>Contact</h1>
+<hr>
+</div>
+  <div class="row">
+  <div class="center">
+  	<div class="col-md-6 col-sm-12 container eventsal wow bounceInUp" data-wow-duration="1s" style="padding: 10px;">
+  		<h2>Chairman</h2>
+  		<hr>
+  		<p style="font-size: x-large;">Name:Anish V</p>
+  		<p>Phone :<a class="btn btn-success" href="#" onclick="location.href='tel:801-531-0092'" style="padding:5px;margin: 5px;">801-531-0092</a><i>(Click to call in mobile)</i></p>
+  	</div>
+  	<div class="col-md-6 col-sm-12 container eventsal wow bounceInUp" data-wow-duration="1s" style="padding: 10px;">
+  		<h2>Treasurer</h2>
+  		<hr>
+  		<p style="font-size: x-large;">Name:Kishore M</p>
+  		<p>Phone :<a class="btn btn-success" href="#" onclick="location.href='tel:959-732-6711'" style="padding:5px;margin: 5px;">959-732-6711</a><i>(Click to call in mobile)</i></p>
+  	</div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="center">
+  	<div class="col-md-6 col-sm-12 container eventsal wow  bounceInUp" data-wow-duration="1s" style="padding: 10px;">
+  		<h2>Event Manager</h2>
+  		<hr>
+  		<p style="font-size: x-large;">Name:Rajesh M</p>
+  		<p>Phone :<a class="btn btn-success" href="#" onclick="location.href='tel:830-018-2806'" style="padding:5px;margin: 5px;">830-018-2806</a><i>(Click to call in mobile)</i></p>
+  	</div>
+  	<div class="col-md-6 col-sm-12 container eventsal wow bounceInUp" data-wow-duration="1s" style="padding: 10px;">
+  		<h2>Event Manager</h2>
+  		<hr>
+  		<p style="font-size: x-large;">Name:Madhan M</p>
+  		<p>Phone :<a class="btn btn-success" href="#" onclick="location.href='tel:880-711-0020'" style="padding:5px;margin: 5px;">880-711-0020</a><i>(Click to call in mobile)</i></p>
+  	</div>
+  </div>
+  </div>
+</div>
+<footer>
+    <div style="background-color:#303236;color: white;padding:2px;">
+    <p class="footer" style="text-align: center;">Developed by <a href="#" onclick="window.open('aboutme.html' + location.search)"> <b>Cryptera Web Team </b> </a>| CIT, Coimbatore</p>
+    </div>
+</footer>
+</body>
+</html>
+

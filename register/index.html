@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			Sign-Up
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			#Sign-Up
+			{
+				font-size: large;
+				margin-top: 20px;
+				color: white;
+				background-color: rgba(200,200,200,0.1); 
+				border-radius: 10px;
+				box-shadow: inset 0 50px rgba(255,255,255,0.2), 
+            				inset 0 -15px 30px rgba(0,0,0,0.4),
+                  			0 5px 10px rgba(0,0,0,0.5);
+			}
+			body{
+				background-image: url(ppt.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+			}
+		</style>
+	</head>
+<body id="body-color">
+	<div id="Sign-Up" class="container jumbotron">
+		<fieldset ><legend style="font-size: x-large;color: white;">Registration Form</legend>
+			<form method="post" action="form.php">
+				<div class="form-group">
+      				<label for="name">Name:</label>
+      				<input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" required="">
+    			</div>
+    			<div class="form-group">
+      				<label for="college">College / Institution:</label>
+      				<input type="text" class="form-control" id="college" placeholder="Enter your college/institution name" name="college" required="">
+    			</div>
+    			<div class="form-group">
+      				<label for="department">Department:</label>
+      				<input type="text" class="form-control" id="department" placeholder="Enter your department" name="dept" required="">
+    			</div>
+          <div class="form-group">
+              <label for="year">Year:</label>
+              <select class="form-control" id="year" name="year" required="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+          </div>
+          <div class="form-group">
+      				<label for="gender">Gender:</label>
+      				<input id="button" type="radio" name="gender" value="male" style="margin:5px 5px;" /> Male
+      				<input id="button" type="radio" name="gender" value="female" style="margin:5px 5px;" /> Female
+    			</div>
+    			<div class="form-group">
+      				<label for="number">Phone Number:</label>
+      				<input type="phone" class="form-control" id="phone" placeholder="Enter your phone number" name="phone" required="">
+    			</div>
+    			<div class="form-group">
+      				<label for="email">E-mail Id:</label>
+      				<input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required="">
+    			</div>
+    			<div class="form-group">
+    				<label for="workshop">Select the workshop(s) you want to attend:</label>
+    				<div class="checkbox" id="workshop">
+      					<label><input type="checkbox" name="w1">Machine Learning</label>
+      					<br>
+      					<label><input type="checkbox" name="w2">Alg'rhythm</label>
+    				</div>
+    			</div>
+    			<div class="form-group">
+      				<label for="events">Are you willing to attend our events?</label>
+      				<div class="checkbox" id="events">
+      					<label><input type="checkbox" name="day1">Day1 Events</label>
+                <br>
+                <label><input type="checkbox" name="day2">Day2 Events</label>
+      					<br>
+      					<label><input type="checkbox" name="gaming">Gaming</label>
+    				</div>
+    			</div>
+    			<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</fieldset>
+	</div>
+	</body>
+</html>

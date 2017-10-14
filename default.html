@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cryptera 2017</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <script src="js/wow.min.js"></script>
+  <script>
+  		new WOW().init();
+  </script>
+  <style>
+  html{
+  	 width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  body {
+      position: relative; 
+  }
+  #home {padding-top:50px;height:100vh;color: #fff; background-image: url(images/head.gif);background-attachment: fixed;background-repeat: no-repeat;background-size: cover;}
+  #about {padding-top:50px;min-height: 500px;padding-bottom: 10px;color: #fff; background-color: #088cbc;}
+  #events {padding:50px;min-height:500px;color: #fff; background-color: #fff;}
+  #contact {padding:50px;min-height:100vh;color: #fff; background-color: #323438;}
+
+  nav li{
+  	margin: 0px 10px;
+  	font-size: 20px;
+  	font-family: slabo;
+  }
+  .photo {
+    display: table;
+}
+.photo a {
+    vertical-align: middle;
+    display: table-cell;
+}
+.photo img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item{
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+	margin: 20px;
+}
+.eventsall{
+	min-height: 300px;
+	margin: 0;
+	padding: 30px;
+}
+#events p{
+
+}
+blockquote{
+	min-height:150px;
+	border-radius: 5px;
+}
+  </style>
+  <script type="text/javascript">
+  	$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
+  	$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+});
+  </script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: .9;display: block;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" style="color: white;padding-top: 10px;"><img src="images/crypt.png" style="width: 120px;width: 120px;"></a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" style="float: right;	">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+<div id="home" class="container-fluid" style="text-align: center;">
+  <div class="container wow fadeIn" style="font-size: 6vw;margin-top: 100px;">CRYPTERA '17</div>
+</div>
+<!--About Start-->
+<div id="about" class="container-fluid row wow slideInLeft" data-wow-duration=".5s">
+<div  class="wow slideInRight" data-wow-delay=".2s" data-wow-duration=".5s">
+<div style="float: left;clear: right;padding: 30px;" class="col-md-8 col-sm-8">
+  <h1 style="font-size: 6vw;margin: 20px 0px;">About</h1>
+  <p style="font-size: 20px;text-indent: 20px;color: black;">We, at cryptera, bring to you CIT's technical symposium filled with aspiring computer science engineers striving to change the world and share it with all those willing to participate! All you need to do is take one small step towards the CIT entrance on September 8 and thus take one great step towards a greater future!</p>
+  <blockquote>
+  	It's not really about the competition. Your biggest challenge in a race is yourself. You're often racing against time. You're frequently running everything through your mind. You're always competing against preconceived ideas. It's not really the person next to you that you worry about.
+  </blockquote>
+	</div>
+	<!--About End-->
+	  <div class="col-md-4 col-sm-4 photo">
+	    <a href="#">
+	        <img src="images/about.png">
+	    </a>
+	</div>
+</div>
+</div>
+<div id="events" class="container-fluid"  style="color: black;">
+  <div class="row">
+  <div class="center">
+  	
+  	<div class="col-md-6 col-sm-12 container eventsall wow slideInRight" data-wow-duration="1s">
+  		<h1>Paper Presentation</h1>
+  		<hr>
+  		<blockquote>Nothing speaks better than your ideas presented to the world. Present your ideas and projects and papers and win exciting prizes !</blockquote>
+  		<p>To know more,</p>
+  		<a href="#" onclick="window.open('paper.html' + location.search)" class="btn btn-primary">Take me there</a>
+  	</div>
+  	<div class="col-md-6 col-sm-12 container eventsall wow slideInLeft" data-wow-duration="1s">
+  		<h1>Technical Events</h1>
+  		<hr>
+  		<blockquote>Show your coding skills to the world and display your prowess in programming in a range of events including debugging, blind coding and quizzes!</blockquote>
+  		<p>To know more,</p>
+  		<a href="#" onclick="window.open('events.html' + location.search)" class="btn btn-primary">Take me there</a>
+  	</div>
+
+  </div>
+  </div>
+  <div class="row">
+  <div class="center">
+  	<div class="col-md-6 col-sm-12 container eventsall wow slideInRight" data-wow-duration="1s">
+  		<h1>Workshops</h1>
+  		<hr>
+  		<blockquote>Practice makes one perfect. Learn how in our workshops on current topics including machine learning and Networking !</blockquote>
+  		<p>To know more,</p>
+  		<a href="#" onclick="window.open('work.html' + location.search)" class="btn btn-primary">Take me there</a>
+  	</div>
+  	<div class="col-md-6 col-sm-12 container eventsall wow slideInLeft" data-wow-duration="1s">
+  		<h1>Registration</h1>
+  		<hr>
+  		<blockquote>The ultimate victory in competition is derived from the inner satisfaction of knowing that you have done your best and that you have gotten the most out of what you had to give.</blockquote>
+  			<div>
+  				<div class="container">
+  		<div>For Registration, click one of the following,</div>
+  		<a href="#" onclick="window.open('http://register.cryptera.xyz' + location.search)" class="btn btn-primary" style="margin: 20px 10px 20px 0px;">Workshop Registration</a>
+  		<a href="#" onclick="window.open('http://register.cryptera.xyz' + location.search)" class="btn btn-primary" style="margin: 20px 10px 20px 0px;">Events Registration</a>
+  		<a href="#" onclick="location.href='mailto:csecrypterappt@gmail.com?Subject=Your%20Topic%20here&Body=Don\'t forget to change the subject...'" class="btn btn-primary" target="_top" style="margin: 20px 10px 20px 0px;">For Paper presentation, Send Mail</a>
+  				</div>
+  			</div>
+  	</div>
+
+  </div>
+  </div>
+</div>
+
+<div id="contact" class="container-fluid"  style="color: white;">
+<div><h1>Contact</h1>
+<hr>
+</div>
+  <div class="row">
+  <div class="center">
+  	<div class="col-md-6 col-sm-12 container eventsal wow bounceInUp" data-wow-duration="1s" style="padding: 10px;">
+  		<h2>Chairman</h2>
+  		<hr>
+  		<p style="font-size: x-large;">Name:Anish V</p>
+  		<p>Phone :<a class="btn btn-success" href="#" onclick="location.href='tel:713-992-0916'" style="padding:5px;margin: 5px;">801-531-0092</a><i>(Click to call in mobile)</i></p>
+  	</div>
+  	<div class="col-md-6 col-sm-12 container eventsal wow bounceInUp" data-wow-duration="1s" style="padding: 10px;">
+  		<h2>Treasurer</h2>
+  		<hr>
+  		<p style="font-size: x-large;">Name:Kishore M</p>
+  		<p>Phone :<a class="btn btn-success" href="#" onclick="location.href='tel:713-992-0916'" style="padding:5px;margin: 5px;">959-732-6711</a><i>(Click to call in mobile)</i></p>
+  	</div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="center">
+  	<div class="col-md-6 col-sm-12 container eventsal wow  bounceInUp" data-wow-duration="1s" style="padding: 10px;">
+  		<h2>Event Manager</h2>
+  		<hr>
+  		<p style="font-size: x-large;">Name:Rajesh M</p>
+  		<p>Phone :<a class="btn btn-success" href="#" onclick="location.href='tel:713-992-0916'" style="padding:5px;margin: 5px;">830-018-2806</a><i>(Click to call in mobile)</i></p>
+  	</div>
+  	<div class="col-md-6 col-sm-12 container eventsal wow bounceInUp" data-wow-duration="1s" style="padding: 10px;">
+  		<h2>Event Manager</h2>
+  		<hr>
+  		<p style="font-size: x-large;">Name:Madhan M</p>
+  		<p>Phone :<a class="btn btn-success" href="#" onclick="location.href='tel:713-992-0916'" style="padding:5px;margin: 5px;">880-711-0020</a><i>(Click to call in mobile)</i></p>
+  	</div>
+  </div>
+  </div>
+</div>
+<footer>
+    <div style="background-color:#303236;color: white;padding:2px;">
+    <p class="footer" style="text-align: center;">Developed by <b>Cryptera Web Team </b>| CIT, Coimbatore</p>
+    </div>
+</footer>
+</body>
+</html>
+
+<!--
+ <p>
+  <blockquote>
+  	“ If debugging is the process of removing software bugs, then programming must be the process of putting them in. ” 
+  </blockquote>
+  <blockquote>
+  	“ Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. ” 
+  </blockquote>
+  </p>
+-->

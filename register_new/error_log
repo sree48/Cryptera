@@ -1,0 +1,18 @@
+[24-Aug-2017 16:50:15 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/gowthamprakaash/public_html/register_new/form.php on line 28
+[24-Aug-2017 16:50:23 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/gowthamprakaash/public_html/register_new/form.php on line 28
+[24-Aug-2017 16:53:30 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/gowthamprakaash/public_html/register_new/form.php on line 28
+[24-Aug-2017 16:54:24 UTC] PHP Notice:  Undefined property: PDO::$connect_error in /home/gowthamprakaash/public_html/register_new/form.php on line 10
+[24-Aug-2017 16:54:24 UTC] PHP Notice:  Undefined index: w1 in /home/gowthamprakaash/public_html/register_new/form.php on line 18
+[24-Aug-2017 16:54:24 UTC] PHP Notice:  Undefined index: day2 in /home/gowthamprakaash/public_html/register_new/form.php on line 18
+[24-Aug-2017 17:15:54 UTC] PHP Notice:  Undefined property: PDO::$connect_error in /home/gowthamprakaash/public_html/register_new/form.php on line 10
+[24-Aug-2017 17:15:54 UTC] PHP Notice:  Undefined index: w1 in /home/gowthamprakaash/public_html/register_new/form.php on line 18
+[24-Aug-2017 17:15:54 UTC] PHP Notice:  Undefined index: day1 in /home/gowthamprakaash/public_html/register_new/form.php on line 18
+[24-Aug-2017 17:15:54 UTC] PHP Notice:  Undefined index: gaming in /home/gowthamprakaash/public_html/register_new/form.php on line 18
+[24-Aug-2017 17:15:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Swift_SmtpTransport::newInstance() in /home/gowthamprakaash/public_html/register_new/form.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/gowthamprakaash/public_html/register_new/form.php on line 30
+[24-Aug-2017 17:21:39 UTC] PHP Notice:  Undefined property: PDO::$connect_error in /home/gowthamprakaash/public_html/register_new/form.php on line 10
+[24-Aug-2017 17:21:39 UTC] PHP Notice:  Undefined index: w1 in /home/gowthamprakaash/public_html/register_new/form.php on line 18
+[24-Aug-2017 17:21:39 UTC] PHP Notice:  Undefined index: day1 in /home/gowthamprakaash/public_html/register_new/form.php on line 18
+[24-Aug-2017 17:21:39 UTC] PHP Notice:  Undefined index: gaming in /home/gowthamprakaash/public_html/register_new/form.php on line 18
